@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var txt = "";
+
+        function message()
+        {
+            try
+            {
+                alertMe("Welcome guest!");
+
+            } catch (err) {
+                txt = "There was an error on this page. \n\n";
+                txt += "Error description: " + err.message + "\n\n";
+                txt += "Click OK to continue.\n\n";
+                alert(txt);
+
+                if (!confirm(txt)){
+                    //action to confirm
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="View message" onclick="message()"/>
+</body>
+</html>
